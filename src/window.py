@@ -27,6 +27,7 @@ class LipiWindow(Adw.ApplicationWindow):
 
         self.fonts_view.sheet_view.connect("show-toast", self.on_show_toast)
         self.test_font.connect("show-toast", self.on_show_toast)
+        self.test_font.connect("exit-page", self.on_exit_test_font_page)
         self.fonts_view.sheet_view.connect("test-font", self.on_test_font)
         self.fonts_view.filter_model.connect("items-changed", self.on_update_font_count)
 
@@ -61,3 +62,7 @@ class LipiWindow(Adw.ApplicationWindow):
         self.test_view_header_title.set_title(font_model.family)
         self.nav_view.push_by_tag("test_view")
         self.test_font.set_font_model(font_model)
+
+    def on_exit_test_font_page(self, _):
+        if self.nav_view.get_visible_page_tag() == "test_view":
+            self.nav_view.pop()

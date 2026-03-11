@@ -1,7 +1,7 @@
 import asyncio
 from typing import List, Set, Tuple
 
-from gi.repository import Adw, GObject, Gtk, Pango
+from gi.repository import Adw, GLib, GObject, Gtk, Pango
 
 from .font_model import FontModel
 from .fonts_manager import FontFace, FontsManager
@@ -20,6 +20,10 @@ class TestFont(Adw.Bin):
 
     @GObject.Signal(arg_types=(str,))
     def show_toast(self, msg: str):
+        pass
+
+    @GObject.Signal()
+    def exit_page(self):
         pass
 
     def __init__(self, **kwargs):
@@ -51,6 +55,8 @@ class TestFont(Adw.Bin):
 
         except Exception as e:
             self.emit("show-toast", str(e))
+            # Add a timeout so that instant flashing does not happen
+            GLib.timeout_add_seconds(2, self.emit, "exit-page")
 
     def clear_faces_container(self):
         child = self.faces_container.get_first_child()
