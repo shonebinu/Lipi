@@ -12,17 +12,6 @@
     "--share=network",
     "--filesystem=xdg-data/fonts:create"
   ],
-  "cleanup": [
-    "/include",
-    "/lib/pkgconfig",
-    "/man",
-    "/share/doc",
-    "/share/gtk-doc",
-    "/share/man",
-    "/share/pkgconfig",
-    "*.la",
-    "*.a"
-  ],
   "modules": [
     {
       "name": "python3-typing_extensions",
