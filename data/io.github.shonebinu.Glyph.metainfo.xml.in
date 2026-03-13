@@ -104,6 +104,20 @@
   </screenshots>
 
   <releases>
+    <release version="0.3.0" date="2026-03-13">
+        <!-- <url type="details">https://example.org/changelog.html#version_1.0.1</url> -->
+        <description translate="no">
+        <p>Release v0.3.0</p>
+        <ul>
+            <li>Fix active sidebar toggle button in mobile view</li>
+            <li
+                    >Fix infinite loading of test page in case of errors (network error)</li>
+            <li>Add option to toggle font fallback</li>
+            <li>Add filter options</li>
+            <li>Add commit sha to url while generating font files urls</li>
+        </ul>
+        </description>
+    </release>
     <release version="0.2.0" date="2026-03-11">
         <!-- <url type="details">https://example.org/changelog.html#version_1.0.1</url> -->
         <description translate="no">
