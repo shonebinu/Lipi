@@ -65,6 +65,8 @@ class TestFont(Adw.Bin):
             self.faces_container.remove(child)
             child = self.faces_container.get_first_child()
 
+        self.preview_label_widgets.clear()
+
     def populate_faces_container(self, fontmap: Pango.FontMap, faces: List[FontFace]):
         self.clear_faces_container()
 
