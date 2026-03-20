@@ -6,7 +6,7 @@
 
 # Lipi
 
-**Install fonts**
+**Discover and install online fonts**
 
 ![Flathub Downloads](https://img.shields.io/flathub/downloads/io.github.shonebinu.Glyph?style=for-the-badge)
 ![Flathub Version](https://img.shields.io/flathub/v/io.github.shonebinu.Glyph?style=for-the-badge)
