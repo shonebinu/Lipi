@@ -1,6 +1,6 @@
 <div align=center>
 
-![Lipi app screenshot](./data/screenshots/banner.png)
+![Lipi app banner](./data/screenshots/banner.png)
 
 <img src="./data/icons/hicolor/scalable/apps/io.github.shonebinu.Glyph.svg" alt="Lipi Logo" width="128" >
 
