@@ -1,6 +1,6 @@
 <div align=center>
 
-![Lipi app screenshot](./data/screenshots/banner.png)
+![Lipi app banner](./data/screenshots/banner.png)
 
 <img src="./data/icons/hicolor/scalable/apps/io.github.shonebinu.Glyph.svg" alt="Lipi Logo" width="128" >
 
@@ -49,3 +49,9 @@ If someone could point out how to resolve this cleanly without any Flathub excep
 The entirety of the data used in this project is from [Google Fonts Github Repo](https://github.com/google/fonts).
 
 App icon designed by [Jakub Steiner](https://gitlab.gnome.org/jimmac).
+
+## Other apps by me
+
+- [**Brief**](https://github.com/shonebinu/Brief) - Browse command-line cheatsheets
+- [**Defuse**](https://github.com/shonebinu/Defuse) - Remove image backgrounds locally
+- [**Exchange**](https://github.com/shonebinu/Exchange) - Convert between XML and Blueprint
