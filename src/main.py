@@ -50,6 +50,8 @@ class LipiApplication(Adw.Application):
             "Individual fonts are distributed under their respective licenses.",
         )
 
+        about.set_artists(["Jakub Steiner"])
+
         # Translators: Replace "translator-credits" with your name/username, and optionally an email or URL.
         # about.set_translator_credits(_("translator-credits"))
         about.present(self.props.active_window)

@@ -47,3 +47,5 @@ If someone could point out how to resolve this cleanly without any Flathub excep
 ## Credits
 
 The entirety of the data used in this project is from [Google Fonts Github Repo](https://github.com/google/fonts).
+
+App icon designed by [Jakub Steiner](https://gitlab.gnome.org/jimmac).

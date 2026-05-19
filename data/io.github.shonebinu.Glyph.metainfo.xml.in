@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version="1.0" encoding="UTF-8"?>
 <component type="desktop-application">
   <id>io.github.shonebinu.Glyph</id>
   <metadata_license>CC0-1.0</metadata_license>
@@ -7,17 +7,15 @@
   <name>Lipi</name>
   <summary>Discover and install online fonts</summary>
   <description>
-    <p
-        >Discover and install thousands of fonts directly on your system with Lipi.</p>
+    <p>Discover and install thousands of fonts directly on your system with Lipi.</p>
     <p>Features:</p>
     <ul>
-    <li>Preview fonts offline without needing to install them.</li>
-    <li>Test fonts with your own custom text to see how they look.</li>
-    <li>Search through categories like Sans, Serif, and Monospace.</li>
-    <li>Quickly install the latest fonts to your system.</li>
-    <li>View font details, including the designer, license, and file info.</li>
-    <li
-            >High-quality fonts sourced directly from the Google Fonts GitHub repository.</li>
+      <li>Preview fonts offline without needing to install them.</li>
+      <li>Test fonts with your own custom text to see how they look.</li>
+      <li>Search through categories like Sans, Serif, and Monospace.</li>
+      <li>Quickly install the latest fonts to your system.</li>
+      <li>View font details, including the designer, license, and file info.</li>
+      <li>High-quality fonts sourced directly from the Google Fonts GitHub repository.</li>
     </ul>
   </description>
 
@@ -71,8 +69,8 @@
 
   <!-- Applications should set a brand color in both light and dark variants like so -->
   <branding>
-    <color type="primary" scheme_preference="light">#e4b2e5</color>
-    <color type="primary" scheme_preference="dark">#3d233d</color>
+    <color type="primary" scheme_preference="light">#cbc9d3</color>
+    <color type="primary" scheme_preference="dark">#272628</color>
   </branding>
 
   <screenshots>
@@ -104,32 +102,40 @@
   </screenshots>
 
   <releases>
+    <release version="0.3.1" date="2026-05-19">
+      <!-- <url type="details">https://example.org/changelog.html#version_1.0.1</url> -->
+      <description translate="no">
+        <p>Release v0.3.1</p>
+        <ul>
+          <li>Change to app icon designed by Jakub Steiner</li>
+        </ul>
+      </description>
+    </release>
     <release version="0.3.0" date="2026-03-13">
-        <!-- <url type="details">https://example.org/changelog.html#version_1.0.1</url> -->
-        <description translate="no">
+      <!-- <url type="details">https://example.org/changelog.html#version_1.0.1</url> -->
+      <description translate="no">
         <p>Release v0.3.0</p>
         <ul>
-            <li>Fix active sidebar toggle button in mobile view</li>
-            <li
-                    >Fix infinite loading of test page in case of errors (network error)</li>
-            <li>Add option to toggle font fallback</li>
-            <li>Add filter options</li>
-            <li>Add commit sha to url while generating font files urls</li>
+          <li>Fix active sidebar toggle button in mobile view</li>
+          <li>Fix infinite loading of test page in case of errors (network error)</li>
+          <li>Add option to toggle font fallback</li>
+          <li>Add filter options</li>
+          <li>Add commit sha to url while generating font files urls</li>
         </ul>
-        </description>
+      </description>
     </release>
     <release version="0.2.0" date="2026-03-11">
-        <!-- <url type="details">https://example.org/changelog.html#version_1.0.1</url> -->
-        <description translate="no">
+      <!-- <url type="details">https://example.org/changelog.html#version_1.0.1</url> -->
+      <description translate="no">
         <p>Release v0.2.0</p>
         <ul>
-            <li>New app name and logo</li>
-            <li>Implement font testing page</li>
-            <li>New navigation based UI</li>
-            <li>Add filter options</li>
-            <li>Option to delete fonts installed via app</li>
+          <li>New app name and logo</li>
+          <li>Implement font testing page</li>
+          <li>New navigation based UI</li>
+          <li>Add filter options</li>
+          <li>Option to delete fonts installed via app</li>
         </ul>
-        </description>
+      </description>
     </release>
     <release version="0.1.0" date="2026-02-01">
       <!-- <url type="details">https://example.org/changelog.html#version_1.0.1</url> -->
