@@ -23,6 +23,11 @@ FONT_FILE_BASE_URL = f"https://raw.githubusercontent.com/google/fonts/{GF_COMMIT
 OUTPUT_JSON_PATH = "fonts.json"
 OUTPUT_PREVIEWS_PATH = "previews/"
 
+EXCLUDED_FAMILIES = {
+    # https://github.com/shonebinu/Lipi/issues/8#issuecomment-7056309376
+    "Sixtyfour Convergence",
+}
+
 # https://github.com/googlefonts/lang
 gflanguages = LoadLanguages()
 gfscripts = LoadScripts()
@@ -229,6 +234,11 @@ def main(google_fonts_path: Path) -> None:
                 family_data, sample_file_path, preview_string = parse_metadata(
                     metadata_path
                 )
+
+                if family_data["family"] in EXCLUDED_FAMILIES:
+                    print(f"Skipping excluded font: {family_data['family']}")
+                    continue
+
                 metadatas.append(family_data)
                 preview_samples.append(
                     (family_data["family"], sample_file_path, preview_string)
