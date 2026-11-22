@@ -3,11 +3,10 @@
 import argparse
 import json
 import os
-import uuid
 from io import BytesIO
 from pathlib import Path
 from typing import Any, Dict, List, Tuple
-
+import hashlib
 import uharfbuzz as hb
 from fontTools.ttLib import TTFont
 from gflanguages import LoadLanguages, LoadScripts
@@ -88,10 +87,11 @@ def generate_preview_files(
     for family, ttf_path, preview_string in preview_samples:
         try:
             subset_data = generate_subset(ttf_path, preview_string)
-            font = TTFont(subset_data)
+            # Keep the original timestamp so preview files be the same on multiple run if original file do not change
+            font = TTFont(subset_data, recalcTimestamp=False)
 
             # Assign new names for subsetted fonts so there is no conflict with existing ones in the system with the same name
-            new_family_name = str(uuid.uuid4())
+            new_family_name = hashlib.sha1(family.encode("utf-8")).hexdigest()[:16]
             rename_ttf(font, new_family_name)
             preview_family_map[family] = new_family_name
 
