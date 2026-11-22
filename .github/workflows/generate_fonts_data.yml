@@ -2,7 +2,7 @@ name: Generate Google fonts index with preview fonts collection
 
 on:
   schedule:
-    - cron: "0 0 * * 0" # every sunday midnight
+    - cron: "0 0 1 * *" # 1st of every month
   workflow_dispatch:
 
 permissions:
