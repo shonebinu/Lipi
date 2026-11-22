@@ -91,7 +91,9 @@ def generate_preview_files(
             font = TTFont(subset_data, recalcTimestamp=False)
 
             # Assign new names for subsetted fonts so there is no conflict with existing ones in the system with the same name
-            new_family_name = hashlib.sha1(family.encode("utf-8")).hexdigest()[:16]
+            new_family_name = (
+                "lipi_" + hashlib.sha1(family.encode("utf-8")).hexdigest()[:16]
+            )
             rename_ttf(font, new_family_name)
             preview_family_map[family] = new_family_name
 
@@ -131,7 +133,7 @@ def get_sample_by_subset_name(subset_name: str) -> str | None:
     ]
 
     if script_langs:
-        most_popular = max(script_langs, key=lambda l: l.population)
+        most_popular = max(script_langs, key=lambda l: (l.population, l.id))
         return most_popular.sample_text.tester
     return None
 
@@ -154,7 +156,7 @@ def get_best_preview_string(metadata) -> str:
             if lang.script == target_script and lang.sample_text.tester
         ]
         if script_languages:
-            most_popular = max(script_languages, key=lambda l: l.population)
+            most_popular = max(script_languages, key=lambda l: (l.population, l.id))
             preview_string = most_popular.sample_text.tester
     else:
         subsets = metadata.get("subsets", [])
@@ -257,7 +259,7 @@ def main(google_fonts_path: Path) -> None:
     # remove fonts where we couldn't generate a proper subset
     metadatas = [f for f in metadatas if f["preview_family"] is not None]
 
-    metadatas.sort(key=lambda f: f["display_name"].lower())
+    metadatas.sort(key=lambda f: (f["display_name"].lower(), f["family"].lower()))
 
     Path(OUTPUT_JSON_PATH).write_text(
         json.dumps(metadatas, indent=2, ensure_ascii=False),
